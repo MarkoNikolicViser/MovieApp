@@ -24,7 +24,7 @@ export const MovieProvider=props=>{
   
 
     const GetData=async()=>{
-      const response=await(await fetch(`http://www.omdbapi.com/?s=${query.title}&y=${query.year}&type=${query.type}&apikey=${API_KEY}`).catch(ErrHandler)).json();
+      const response=await(await fetch(`https://www.omdbapi.com/?s=${query.title}&y=${query.year}&type=${query.type}&apikey=${API_KEY}`).catch(ErrHandler)).json();
         if(response.code &&response.code==400){
         return;
         }
