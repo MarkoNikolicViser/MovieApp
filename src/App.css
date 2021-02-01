@@ -1,38 +1,242 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  background-color: black;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper{
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(7,2,11);
+  display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav img{
+  width: 2rem;
+  padding-bottom: 150%;
+  cursor: pointer;
+}
+nav{
+  background-color: black;
+  width: 8%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.home{
+  width: 92%;
+  height: 100%;
+  display: flex;
+}
+.prazan-div{
+  width: 25%;
+  height: 100%;
+}
+.pozadina{
+  width: 100%;
+  height: 100%;
+  background-image: url(images/stPozadina.jpg);
+  /* background-size: 100% 100%; */
+  background-size:cover ;
+}
+.naslov{
+  position: absolute;
+  top: 20%;
+  left: 12%;
+}
+.paragraf{
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  width: 35rem;
+  position: relative;
+  color: white;
+  opacity: 0.8;
+  padding-bottom: 2rem;
+}
+.naslov h1{
+  font-family: 'DM Serif Display', serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 6rem;
+}
+.naslov1{
+  display: flex;
+  position: relative;
+  text-align: center;
+  width: 10rem;
+  line-height: 5rem;
+  padding-bottom: 2rem;
+}
+.dugmici{
+  width: 26rem;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+.play, .more-info{
+  font-weight: 700;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+text-align: center;
+width: 12rem;
+height: 4rem;
+background-color: gray;
+color: white;
+cursor: pointer;
+}
+.more-info{
+  opacity: 0.7;
+}
+.play{
+  opacity: 0.9;
+  background-color: white;
+  color: black;
+}
+.play:hover{
+  background-color: red;
+  opacity: 0.7;
+}
+.kartice{
+  margin-left: 8%;
+  background-color: black;
+  width: 92%;
+  height: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* overflow: hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box; */
+}
+.kartica{
+  width: 22rem;
+  height:30vh;
+  position: relative;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.kartice img{
+  width: 100%;
+  height: 100%;
+}
+.pretraga-naslov{
+  border: none;
+  background-color: gray;
+  opacity: 0.8;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.pretraga-godinama{
+  border: none;
+  background-color: gray;
+  opacity: 0.8;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  width: 10rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+form{
+  display: flex;
+  color: white;
+  width: 50%;
+  height: 2rem;
+  position: absolute;
+  align-items: baseline;
+  top: 10%;
+  left: 25%;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+hr{
+  border: none;
+  border-radius: 5px;
+  height: 5px;
+  background-color: red;
+   display: none;
+}
+::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+.kuca{
+  display: block;
+}
+form button{
+  background-color: red;
+  border: none;
+  width: 9rem;
+  height: 3.5rem;
+  color: white;
+  opacity: 0.9;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.serija{
+  height: 3rem;
+  width: 9rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: rgb(179, 179, 54);
+  opacity: 0.9;
+}
+.film{
+  opacity: 0.9;
+  height: 3rem;
+  width: 9rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: rgb(81, 54, 179);
+}
+.opis{
+  position: absolute;
+  display: none;
+  bottom: 0rem;
+  background-color: gray;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+.kartica:hover{
+  transition: transform 0.4s ease;
+  transform: scale(1.2);
+  z-index: 1;
+}
+.opis-naslov, .opis-tip, .opis-relise{
+  width: 33.3%;
+  text-align: center;
+  color: black;
+}
+.kartica:hover .opis{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a{
+  text-decoration: none;
+}
+@media screen and (max-width:600px){
+  html{
+   font-size: 45%;
   }
-  to {
-    transform: rotate(360deg);
+  .pretraga-naslov{
+    width: 20rem;
+  }
+  .pretraga-godinama{
+    width: 5rem;
   }
 }
